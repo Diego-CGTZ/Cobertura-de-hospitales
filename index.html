@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobertura de Hospitales</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <title>Mapa de Cobertura Hospitalaria</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
-    <div class="control-panel">
-        <h2>Buscador de Hospitales</h2>
-        <input type="text" id="address" placeholder="Ingresa una dirección...">
-        <button onclick="geocodeAddress()">Buscar</button>
-        <div id="analysisResult" class="analysis-result"></div>
-    </div>
-    <div id="map"></div>
+    <header>
+        <h1>Mapa de Cobertura Hospitalaria</h1>
+        <p>Consulta la accesibilidad a hospitales en distintas zonas.</p>
+    </header>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="address" placeholder="Ingresa una dirección...">
+            <button onclick="geocodeAddress()">Buscar</button>
+        </div>
+
+        <div id="map"></div>
+        
+        <div id="analysisResult" class="result-box"></div>
+    </div>
 </body>
 </html>
